@@ -1,0 +1,214 @@
+.form__list {
+  list-style: none;
+
+  margin: 30px 0;
+  padding: 0;
+
+  &--radio {
+    display: flex;
+    margin: 0;
+
+    label {
+      padding: 4px;
+    }
+
+    label,
+    input {
+      cursor: pointer;
+    }
+
+    & > span {
+      padding: 0 10px;
+    }
+  }
+
+  &--checkbox {
+    margin: 0;
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    label {
+      padding: 4px;
+
+      font-weight: normal;
+    }
+
+    label,
+    input {
+      cursor: pointer;
+    }
+  }
+}
+
+.form__item {
+  position: relative;
+
+  margin-top: 30px;
+
+  &--pass-confirm {
+    position: relative;
+
+    margin-top: 8px;
+  }
+}
+
+.form__sub-text {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form__field,
+.form__textarea {
+  padding: 11px 20px 10px;
+  width: 100%;
+
+  border: 1px solid $gray-border;
+
+  &:focus {
+    border: 1px solid $blueHover;
+  }
+
+  &:invalid {
+     border: 1px solid $red;
+  }
+}
+
+.form__textarea {
+  max-width: 400px;
+}
+
+.form__pass-rules {
+  margin: 4px 0 0;
+
+  font-size: $baseFontSize - 2;
+  color: $gray-rule;
+
+  dt {
+    margin-bottom: 2px;
+  }
+}
+
+.form__pass-rule {
+  position: relative;
+
+  margin-bottom: 4px;
+  margin-left: 20px;
+
+  font-weight: normal;
+
+  svg {
+    position: absolute;
+    left: -20px;
+  }
+
+  &--count {
+    svg {
+      left: -19px;
+    }
+  }
+
+  &--error {
+    color: $red;
+  }
+
+  &--ok {
+    color: $green;
+  }
+
+  &--different {
+    margin-left: 0;
+
+    color: $red;
+  }
+}
+
+.form__field-error {
+  position: absolute;
+  bottom: -20px;
+
+  display: block;
+
+  font-size: $baseFontSize - 2;
+  font-weight: normal;
+  color: $red;
+}
+
+.form__registration-federal-law {
+  position: relative;
+
+  display: inline-block;
+
+  font-size: $baseFontSize - 2;
+  font-weight: normal;
+
+  cursor: pointer;
+
+  input {
+    position: relative;
+
+    margin-top: 0;
+    margin-right: 4px;
+    width: 13px;
+    height: 13px;
+
+    opacity: 0;
+  }
+
+  input[type=checkbox] {
+    &:focus + span {
+      border: 1px solid $blue;
+    }
+
+    &:checked + span {
+      border: 1px solid $blue;
+      background-color: $blue;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 1px;
+
+        display: block;
+        width: 8px;
+        height: 5px;
+
+        border-left: 2px solid $white;
+        border-bottom: 2px solid $white;
+
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  span {
+    position: absolute;
+    top: 10px;
+    left: 2px;
+
+    display: block;
+    margin: 0;
+    width: 12px;
+    height: 12px;
+
+    border: 1px solid $gray-border;
+    border-radius: 3px;
+    background: $white;
+  }
+
+  p {
+    display: inline-block;
+    margin: 8px 0 8px 4px;
+  }
+
+  a {
+    color: $blue;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}

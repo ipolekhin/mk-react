@@ -1,0 +1,19 @@
+@keyframes popup-animation {
+  0% {
+    transform: translateY(-1000px);
+
+    z-index: 101;
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
